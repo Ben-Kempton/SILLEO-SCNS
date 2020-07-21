@@ -5,14 +5,14 @@
 If you plan on using the control GUI, navigate to the top level of the repository
 ```bash
 # run the gui script with python
-~thesis-git$ python3 ./py-bits/gui.py
+~path_to_repo$ python3 ./gui.py
 ```
 
 This should result in the following GUI appearing:
 
 <center>
 <figure>
-  <img src="./pics/gui_ex.png" alt="pic of gui"/>
+  <img src="gui_ex.png" alt="pic of gui"/>
 </figure>
 </center>
 
@@ -36,12 +36,12 @@ Numbering is as follows:
 
 <center>
 <figure>
-  <img src="./pics/satellite_intra_plane_numbering.png" alt="image of satellite intra plane numbering"/>
+  <img src="satellite_intra_plane_numbering.png" alt="image of satellite intra plane numbering"/>
   <figcaption>At simulation time t=0, the first satellite in a plane starting from the ascending node <a href="https://en.wikipedia.org/wiki/Orbital_elements">(orbital terms 101)</a>  has the offset number "0".  Satellites are numbered sequentially in the direction of orbital motion, all the way up to [number-of-satellites-in-plane]-1 </figcaption>
 </figure>
 
 <figure>
-  <img src="./pics/plane_numbering.png" alt="image of satellite intra plane numbering"/>
+  <img src="plane_numbering.png" alt="image of satellite intra plane numbering"/>
   <figcaption>At simulation time t=0, the plane the first ascending node starting from the reference direction (ray defined by the positive x direction in this simulation) and moving along the reference (XY) plane Eastward will be plane "0". Plane numbers increment moving eastward.  </figcaption>
 </figure>
 
@@ -104,9 +104,21 @@ LINK_DTYPE = np.dtype([
 In future work other values may be added, like data rate or power cost.
 
 
-### Propagating orbits
+## Coordinate System
 
-~~This initial implementation is using the PyAstronomy Markley Kepler Ellipse solver for propagating orbits. Since each orbital plane is described by a single orbit, and the difference between satellite position within a plane is only a time offset, only a single position function is needed for each plane. This is where the time offset value for each satellite some from.~~
+3D cartesian, origin is the geometric center of the Earth. Upon simulation init, Earth is alligned as follows:
+<center>
+<figure>
+  <img src="coords_sys_at_t0.png" alt="image of satellite intra plane numbering"/>
+  <figcaption>At simulation time t=0, Earth is alligned like this, with 0 longitude alligning with the positive X axis. As the earth rotates, this alignment repeats once per 24 hours. Satellites orbit around the origin. </figcaption>
+</figure>
 
+## Rendering with VTK (OpenGL) 
+
+TODO
+
+## Using GML Files
+
+TODO
 
 
