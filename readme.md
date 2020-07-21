@@ -1,7 +1,7 @@
-<center> <img src="./pics/mini_gifs/p_8_i_45_.gif" width="200" height="200" /> </center>
+<center> <img src="p_8_i_45_.gif" width="200" height="200" /> </center>
 
 
-Ben's Thesis README
+README
 ===
 
 **Abstract**
@@ -13,16 +13,3 @@ Getting started:
 * [Install Guide](installguide.md)
 * [User Guide](userguide.md)
 
-___
-## For old readme notes see [Archive](worklog.md)
-
-
-## From last Week
-
-From last week's meeting with advisor:
-* do I really need PyQt5==5.9.2 ?
-	* NO, JUST "pip3 install PyQt5" works fine
-* GUI - add stats for network
-	* max out degree / min out degree
-* make a way to vis a GML file
-* make detailed thesis outline
