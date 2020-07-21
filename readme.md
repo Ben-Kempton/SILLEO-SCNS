@@ -1,4 +1,4 @@
-<center> <img src="p_8_i_45_.gif" width="200" height="200" /> </center>
+<center> <img src="pics/p_8_i_45_.gif" width="200" height="200" /> </center>
 
 
 README

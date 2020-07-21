@@ -38,8 +38,8 @@ except ModuleNotFoundError:
 
 EARTH_RADIUS = 6371000  # radius of Earth in meters
 
-PNG_OUTPUT_PATH = "py-bits/pics/p"  # where to save images of the animation
-GML_OUTPUT_PATH = 'py-bits/gmls/g'  # where to save gml files
+PNG_OUTPUT_PATH = "pics/p"  # where to save images of the animation
+GML_OUTPUT_PATH = 'gmls/g'  # where to save gml files
 
 MIN_SAT_ELEVATION = 30  # degrees
 
@@ -120,7 +120,7 @@ class Simulation():
 			captureImages=False,
 			captureInterpolation=1,
 			captureGML=False,
-			groundPtsFile='py-bits/city_data.txt',
+			groundPtsFile='city_data.txt',
 			gmlImportFileName=None):
 
 		if gmlImportFileName is not None:
