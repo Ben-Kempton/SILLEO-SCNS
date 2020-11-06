@@ -13,3 +13,24 @@ Getting started:
 * [Install Guide](installguide.md)
 * [User Guide](userguide.md)
 
+## Use
+
+If you end up using the tool for something, please cite the related thesis document via one of the methods below. The code is licensed under the GNU General Public License Version 3.
+
+BibTeX Citation:
+```
+@phdthesis{
+    author={Kempton,Benjamin S.},
+    year={2020},
+    title={A Simulation Tool to Study Routing in Large Broadband Satellite Networks},
+    journal={ProQuest Dissertations and Theses},
+    pages={63},
+    isbn={9798662568945},
+    url={https://search.proquest.com/docview/2438605919?accountid=27868},
+}
+```
+
+IEEE:
+```
+[1] B. S. Kempton, "A Simulation Tool to Study Routing in Large Broadband Satellite Networks." Christopher Newport University, 2020.
+```

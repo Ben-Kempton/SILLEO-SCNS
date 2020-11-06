@@ -70,14 +70,15 @@ Therefore, the numpy array containing the satellite constellation will have the 
 
 ```python
 # Satellites array
-SATELLITE_DTYPE = np.dtype([
-	('ID', np.int16),             # ID number, unique, =
-	('plane_number', np.int16),   # which orbital plane
-	('offset_number', np.int16),  # What satellite withe
-	('time_offset', np.float32),  # time offset for kepl
-	('x', np.int32),              # x position in meters
-	('y', np.int32),              # y position in meters
-	('z', np.int32)])             # z position in meters
+  # Satellites array
+  SATELLITE_DTYPE = np.dtype([
+    ('ID', np.int16),               # ID number, unique
+    ('plane_number', np.int16),     # which orbital plane the satellite is in
+    ('offset_number', np.int16),    # satellite number local to a plane
+    ('time_offset', np.float32),    # time offset for Kepler Ellipse solver
+    ('x', np.int32),                # x position in meters
+    ('y', np.int32),                # y position in meters
+    ('z', np.int32)])               # z position in meters
 
 # Groundstations array
 GROUNDPOINT_DTYPE = np.dtype([
@@ -116,7 +117,25 @@ In future work other values may be added, like data rate or power cost.
 
 ## Rendering with VTK (OpenGL)
 
-TODO
+Like me, you might wonder what the numerous vkt calls are for.
+Answer: you need to manually configure a render pipeline for
+each object (vtk actor) in the scene.
+A typical VTK render pipeline:
+
+1. point data array   <-- set/update position data
+
+2. poly data array
+	
+3. poly data mapper
+	
+4. object actor   <-- edit color/size/opacity, apply rotations/translations
+	
+5. vtk renderer
+	
+6. vkt render window
+7. vkt render interactor   <-- trigger events, animate
+	
+The render window is what pops up on your screen to display the various objects or actors in the scene.
 
 ## Using GML Files
 
