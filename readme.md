@@ -19,12 +19,11 @@ If you end up using the tool for something, please cite the related thesis docum
 
 BibTeX Citation:
 ```
-@phdthesis{
+@thesis{bskempton,
     author={Kempton,Benjamin S.},
     year={2020},
     title={A Simulation Tool to Study Routing in Large Broadband Satellite Networks},
     journal={ProQuest Dissertations and Theses},
-    pages={63},
     isbn={9798662568945},
     url={https://search.proquest.com/docview/2438605919?accountid=27868},
 }
